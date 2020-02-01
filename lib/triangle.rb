@@ -5,5 +5,15 @@
     @a = a
     @b = b
     @c = c
-  end # write code here
+  end
+   def kind
+    validate_triangle
+    if a == b && b == c
+      :equilateral
+    elsif a == b || b == c || a == c
+      :isosceles
+    else
+      :scalene
+    end
+  end
 end
